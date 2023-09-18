@@ -9,7 +9,36 @@ for i in sources/*.txt tests/*.txt; do
 done
 
 # ############ CORE OF THE PROJECT  ############
-echo "Commands for doing the rest of the fsts will be put here"
+echo "Taking care of the FSTs"
+
+echo "[+] mmm2mm: DONE"
+
+echo "[-] mix2numerical: GENERATING"
+fstconcat compiled/mmm2mm.fst compiled/mix2numerical-part.fst > compiled/mix2numerical.fst
+echo "[+] mix2numerical: DONE"
+
+echo "[+] pt2en: DONE"
+
+echo "[-] en2pt: GENERATING"
+fstinvert compiled/pt2en.fst > compiled/en2pt.fst
+echo "[+] en2pt: DONE"
+
+echo "[+] day: DONE"
+
+echo "[+] month: DONE"
+
+echo "[+] year: DONE"
+
+echo "[-] datenum2text: GENERATING"
+fstconcat compiled/month.fst compiled/day.fst > compiled/month-day.fst
+fstconcat compiled/datenum2text-part.fst compiled/year.fst > compiled/datenum2text-part-year.fst
+fstconcat compiled/month-day.fst compiled/datenum2text-part-year.fst > compiled/datenum2text.fst
+rm compiled/month-day.fst compiled/datenum2text-part-year.fst
+echo "[+] datenum2text: DONE"
+
+echo "[-] mix2text: TODO"
+
+echo "[-] date2text: TODO"
 
 # ############ generate PDFs  ############
 echo "Starting to generate PDFs"

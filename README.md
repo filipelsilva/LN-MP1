@@ -22,4 +22,6 @@
 
 - [ ] mix2text
 
+* pt2en + mix2numerical + datenum2text
+
 - [ ] date2text
