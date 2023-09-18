@@ -1,3 +1,11 @@
+# Run tests
+
+`target=<name of file without extension> make test`
+
+Example: `target=mix2numerical make test`
+
+# Progress
+
 - [x] mmm2mm
 
 - [x] mix2numerical
