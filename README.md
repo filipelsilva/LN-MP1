@@ -30,7 +30,7 @@ Example: `target=mix2numerical make test`
 
 * month + removeslash + day + removeslash + datenum2text-part + year
 
-- [ ] mix2text
+- [x] mix2text
 
 * union of:
     * compose of:
@@ -42,8 +42,10 @@ Example: `target=mix2numerical make test`
         * mix2numerical
         * datenum2text
 
-- [ ] date2text
+- [x] date2text
 
 * union of:
-    * date2text
-    * datenum2text
+    * mix2text
+    * compose of:
+        * invert mix2numerical
+        * mix2text
