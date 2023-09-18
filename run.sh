@@ -23,9 +23,9 @@ done
 echo "\n***********************************************************"
 echo "Testing"
 echo "***********************************************************"
-for test in sources/*.txt; do
+for test in "$(find compiled -type f -not -name 't-*')"; do
     echo $test
-    name_of_test=$(basename $test '.txt')
+    name_of_test=$(basename $test '.fst')
     for w in compiled/t-${name_of_test}*.fst; do
         fstcompose $w compiled/${name_of_test}.fst | fstshortestpath | fstproject --project_type=output | fstrmepsilon | fsttopsort > compiled/$(basename $i ".fst")-out.fst
     done
