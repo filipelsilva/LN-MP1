@@ -16,11 +16,10 @@
 
 - [x] year
 
-- [] datenum2text
+- [ ] datenum2text
 
 * month + day + datenum2text-part + year
 
-- [] mix2text
+- [ ] mix2text
 
-- [] date2text
-
+- [ ] date2text
