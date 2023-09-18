@@ -41,8 +41,8 @@ rm compiled/month-noslash.fst compiled/day-noslash.fst compiled/month-day-noslas
 echo "[+] datenum2text: DONE"
 
 echo "[-] mix2text: GENERATING"
-fstconcat compiled/mix2numerical.fst compiled/datenum2text.fst > compiled/mix2text-part2.fst
-fstcompose compiled/mix2text-part2.fst compiled/pt2en.fst > compiled/mix2text-part1.fst
+fstcompose compiled/mix2numerical.fst compiled/datenum2text.fst > compiled/mix2text-part2.fst
+fstcompose compiled/pt2en.fst compiled/mix2text-part2.fst > compiled/mix2text-part1.fst
 fstunion compiled/mix2text-part1.fst compiled/mix2text-part2.fst > compiled/mix2text.fst
 rm compiled/mix2text-part1.fst compiled/mix2text-part2.fst
 echo "[+] mix2text: DONE"

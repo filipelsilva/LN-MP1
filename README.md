@@ -34,9 +34,13 @@ Example: `target=mix2numerical make test`
 
 * union of:
     * compose of:
-        * mix2numerical + datenum2text
+        * compose of:
+            * mix2numerical
+            * datenum2text
         * pt2en
-    * mix2numerical + datenum2text
+    * compose of:
+        * mix2numerical
+        * datenum2text
 
 - [ ] date2text
 
