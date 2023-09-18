@@ -40,9 +40,15 @@ fstconcat compiled/month-day-noslash.fst compiled/datenum2text-part-year.fst > c
 rm compiled/month-noslash.fst compiled/day-noslash.fst compiled/month-day-noslash.fst compiled/datenum2text-part-year.fst
 echo "[+] datenum2text: DONE"
 
-echo "[-] mix2text: TODO"
+echo "[-] mix2text: GENERATING"
+fstconcat compiled/mix2numerical.fst compiled/datenum2text.fst > compiled/mix2text-part2.fst
+fstcompose compiled/mix2text-part2.fst compiled/pt2en.fst > compiled/mix2text-part1.fst
+fstunion compiled/mix2text-part1.fst compiled/mix2text-part2.fst > compiled/mix2text.fst
+rm compiled/mix2text-part1.fst compiled/mix2text-part2.fst
+echo "[+] mix2text: DONE"
 
-echo "[-] date2text: TODO"
+echo "[-] date2text: GENERATING"
+echo "[+] date2text: DONE"
 
 # ############ generate PDFs  ############
 echo "Starting to generate PDFs"
