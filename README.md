@@ -28,7 +28,7 @@ Example: `target=mix2numerical make test`
 
 - [ ] datenum2text
 
-* month + day + datenum2text-part + year
+* month + removeslash + day + removeslash + datenum2text-part + year
 
 - [ ] mix2text
 

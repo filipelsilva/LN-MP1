@@ -32,10 +32,12 @@ echo "[+] month: DONE"
 echo "[+] year: DONE"
 
 echo "[-] datenum2text: GENERATING"
-fstconcat compiled/month.fst compiled/day.fst > compiled/month-day.fst
+fstconcat compiled/month.fst compiled/removeslash.fst > compiled/month-noslash.fst
+fstconcat compiled/day.fst compiled/removeslash.fst > compiled/day-noslash.fst
 fstconcat compiled/datenum2text-part.fst compiled/year.fst > compiled/datenum2text-part-year.fst
-fstconcat compiled/month-day.fst compiled/datenum2text-part-year.fst > compiled/datenum2text.fst
-rm compiled/month-day.fst compiled/datenum2text-part-year.fst
+fstconcat compiled/month-noslash.fst compiled/day-noslash.fst > compiled/month-day-noslash.fst
+fstconcat compiled/month-day-noslash.fst compiled/datenum2text-part-year.fst > compiled/datenum2text.fst
+rm compiled/month-noslash.fst compiled/day-noslash.fst compiled/month-day-noslash.fst compiled/datenum2text-part-year.fst
 echo "[+] datenum2text: DONE"
 
 echo "[-] mix2text: TODO"
