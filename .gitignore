@@ -1,8 +1,6 @@
 ### custom
-compiled/
-images/
+compiled
+images
 
 ### direnv
 .direnv
-
-compiled
