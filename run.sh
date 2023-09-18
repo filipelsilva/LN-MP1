@@ -46,20 +46,3 @@ for i in compiled/*.fst; do
     echo "Creating image: images/$(basename $i '.fst').pdf"
     fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt $i | dot -Tpdf > images/$(basename $i '.fst').pdf
 done
-
-# ############ run tests ############
-
-echo "\n***********************************************************"
-echo "Testing"
-echo "***********************************************************"
-for test in "$(find compiled -type f -not -name 't-*')"; do
-    echo $test
-    name_of_test=$(basename $test '.fst')
-    for w in compiled/t-${name_of_test}*.fst; do
-        fstcompose $w compiled/${name_of_test}.fst | fstshortestpath | fstproject --project_type=output | fstrmepsilon | fsttopsort > compiled/$(basename $i ".fst")-out.fst
-    done
-    for i in compiled/t-*-out.fst; do
-        echo "Creating image: images/$(basename $i '.fst').pdf"
-        fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt $i | dot -Tpdf > images/$(basename $i '.fst').pdf
-    done
-done

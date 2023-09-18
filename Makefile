@@ -1,6 +1,7 @@
 .PHONY: all
 
-all: fst pdf
+all:
+	./run.sh
 
 .PHONY: fst
 fst:
