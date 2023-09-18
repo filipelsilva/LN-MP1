@@ -1,23 +1,6 @@
 .PHONY: all
-
 all:
 	./run.sh
-
-.PHONY: fst
-fst:
-	mkdir -p compiled
-	for i in sources/*.txt tests/*.txt; do \
-		echo "Compiling: $$i" ; \
-		fstcompile --isymbols=syms.txt --osymbols=syms.txt $$i | fstarcsort > compiled/$$(basename $$i ".txt").fst ; \
-	done
-
-.PHONY: pdf
-pdf:
-	mkdir -p images
-	for i in compiled/*.fst; do \
-		echo "Creating image: images/$$(basename $$i '.fst').pdf" ; \
-		fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt $$i | dot -Tpdf > images/$$(basename $$i '.fst').pdf ; \
-	done
 
 .PHONY: test
 test:
