@@ -14,6 +14,8 @@ Example: `target=mix2numerical make test`
 
 - [x] pt2en
 
+* pt2en-part + mix2numerical-part
+
 - [x] en2pt
 
 * invert pt2en

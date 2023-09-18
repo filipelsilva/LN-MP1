@@ -17,7 +17,9 @@ echo "[-] mix2numerical: GENERATING"
 fstconcat compiled/mmm2mm.fst compiled/mix2numerical-part.fst > compiled/mix2numerical.fst
 echo "[+] mix2numerical: DONE"
 
-echo "[+] pt2en: DONE"
+echo "[-] pt2en: GENERATING"
+fstconcat compiled/pt2en-part.fst compiled/mix2numerical-part.fst > compiled/pt2en.fst
+echo "[+] pt2en: GENERATING"
 
 echo "[-] en2pt: GENERATING"
 fstinvert compiled/pt2en.fst > compiled/en2pt.fst
