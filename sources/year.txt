@@ -17,16 +17,16 @@
 3	5	8	eighty
 3	5	9	ninety
 
-4	5	0	ten
-4	5	1	eleven
-4	5	2	twelve
-4	5	3	thirteen
-4	5	4	fourteen
-4	5	5	fifteen
-4	5	6	sixteen
-4	5	7	seventeen
-4	5	8	eighteen
-4	5	9	nineteen
+4	6	0	ten
+4	6	1	eleven
+4	6	2	twelve
+4	6	3	thirteen
+4	6	4	fourteen
+4	6	5	fifteen
+4	6	6	sixteen
+4	6	7	seventeen
+4	6	8	eighteen
+4	6	9	nineteen
 
 5	6	0	eps
 5	6	1	one
