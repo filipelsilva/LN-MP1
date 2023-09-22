@@ -14,11 +14,11 @@ echo "Taking care of the FSTs"
 echo "[+] mmm2mm: DONE"
 
 echo "[-] mix2numerical: GENERATING"
-fstconcat compiled/mmm2mm.fst compiled/mix2numerical-part.fst > compiled/mix2numerical.fst
+fstconcat compiled/mmm2mm.fst compiled/acceptor.fst > compiled/mix2numerical.fst
 echo "[+] mix2numerical: DONE"
 
 echo "[-] pt2en: GENERATING"
-fstconcat compiled/pt2en-part.fst compiled/mix2numerical-part.fst > compiled/pt2en.fst
+fstconcat compiled/pt2en-part.fst compiled/acceptor.fst > compiled/pt2en.fst
 echo "[+] pt2en: GENERATING"
 
 echo "[-] en2pt: GENERATING"
@@ -41,10 +41,9 @@ rm compiled/month-noslash.fst compiled/day-noslash.fst compiled/month-day-noslas
 echo "[+] datenum2text: DONE"
 
 echo "[-] mix2text: GENERATING"
-fstcompose compiled/mix2numerical.fst compiled/datenum2text.fst > compiled/mix2text-part2.fst
-fstcompose compiled/pt2en.fst compiled/mix2text-part2.fst > compiled/mix2text-part1.fst
-fstunion compiled/mix2text-part1.fst compiled/mix2text-part2.fst > compiled/mix2text.fst
-rm compiled/mix2text-part1.fst compiled/mix2text-part2.fst
+fstcompose compiled/mix2numerical.fst compiled/datenum2text.fst > compiled/mix2text-part.fst
+fstcompose compiled/pt2en.fst compiled/mix2text-part.fst > compiled/mix2text.fst
+rm compiled/mix2text-part.fst
 echo "[+] mix2text: DONE"
 
 echo "[-] date2text: GENERATING"
