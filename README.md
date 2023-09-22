@@ -10,11 +10,11 @@ Example: `target=mix2numerical make test`
 
 - [x] mix2numerical
 
-* mmm2mm + mix2numerical-part
+* mmm2mm + acceptor
 
 - [x] pt2en
 
-* pt2en-part + mix2numerical-part
+* pt2en-part + acceptor
 
 - [x] en2pt
 
