@@ -34,10 +34,10 @@ Example: `target=mix2numerical make test`
 
 * union of:
     * compose of:
+        * pt2en
         * compose of:
             * mix2numerical
             * datenum2text
-        * pt2en
     * compose of:
         * mix2numerical
         * datenum2text
@@ -46,6 +46,4 @@ Example: `target=mix2numerical make test`
 
 * union of:
     * mix2text
-    * compose of:
-        * invert mix2numerical
-        * mix2text
+    * datenum2text

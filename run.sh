@@ -48,10 +48,7 @@ rm compiled/mix2text-part1.fst compiled/mix2text-part2.fst
 echo "[+] mix2text: DONE"
 
 echo "[-] date2text: GENERATING"
-fstinvert compiled/mix2numerical.fst > compiled/numerical2mix.fst
-fstcompose compiled/numerical2mix.fst compiled/mix2text.fst > compiled/date2text-part.fst
-fstunion compiled/mix2text.fst compiled/date2text-part.fst > compiled/date2text.fst
-rm compiled/numerical2mix.fst compiled/date2text-part.fst
+fstunion compiled/mix2text.fst compiled/datenum2text.fst > compiled/date2text.fst
 echo "[+] date2text: DONE"
 
 # ############ generate PDFs  ############
