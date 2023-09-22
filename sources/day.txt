@@ -2,7 +2,9 @@
 0	2	2	eps
 0	3	3	eps
 0	4	0	eps
+0	4	eps	eps
 
+1	5	eps	first
 1	5	0	tenth
 1	5	1	eleventh
 1	5	2	twelfth
@@ -14,10 +16,12 @@
 1	5	8	eighteenth
 1	5	9	nineteenth
 
+2	5	eps	second
 2	5	0	twentieth
 2	22	eps	twenty
 22	4	eps	-
 
+3	5	eps	third
 3	5	0	thirtieth
 3	33	eps	thirty
 33	4	eps	-
