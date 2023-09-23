@@ -19,6 +19,23 @@ test-all:
 	./test.sh mix2text
 	./test.sh date2text
 
+.PHONY: test-extensive
+test-extensive:
+	./test-extensive.sh $(target)
+
+.PHONY: test-extensive-all
+test-extensive-all:
+	./test-extensive.sh mmm2mm
+	./test-extensive.sh mix2numerical
+	./test-extensive.sh pt2en
+	./test-extensive.sh en2pt
+	./test-extensive.sh day
+	./test-extensive.sh month
+	./test-extensive.sh year
+	./test-extensive.sh datenum2text
+	./test-extensive.sh mix2text
+	./test-extensive.sh date2text
+
 .PHONY: clean
 clean:
 	rm -rf compiled images
