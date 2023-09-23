@@ -51,24 +51,8 @@ case "$test" in
                 run_test $test "$m/$d/2056"
             done
         done
-        for m in ${months_mmm_en[@]}; do
-            for d in ${numbers_with_0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-            for d in ${days_no0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-        done
         ;;
     en2pt)
-        for m in ${months_mmm_pt[@]}; do
-            for d in ${numbers_with_0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-            for d in ${days_no0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-        done
         for m in ${months_mmm_en[@]}; do
             for d in ${numbers_with_0[@]}; do
                 run_test $test "$m/$d/2056"
