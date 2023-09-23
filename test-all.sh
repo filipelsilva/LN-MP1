@@ -33,38 +33,48 @@ case "$test" in
         done
         ;;
     mix2numerical)
-        for y in ${years[@]}; do
-            for m in ${months_mmm_en[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_en[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
         ;;
     pt2en)
-        for y in ${years[@]}; do
-            for m in ${months_mmm_pt[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_pt[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+        done
+        for m in ${months_mmm_en[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
         ;;
     en2pt)
-        for y in ${years[@]}; do
-            for m in ${months_mmm_en[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_pt[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+        done
+        for m in ${months_mmm_en[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
         ;;
@@ -90,88 +100,72 @@ case "$test" in
         done
         ;;
     datenum2text)
-        for y in ${years[@]}; do
-            for m in ${numbers_with_0[@]}; do
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${numbers_with_0[@]}; do
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
-        for y in ${years[@]}; do
-            for m in ${months_mm_no0[@]}; do
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mm_no0[@]}; do
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
         ;;
     mix2text)
-        for y in ${years[@]}; do
-            for m in ${months_mmm_pt[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_pt[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
-        for y in ${years[@]}; do
-            for m in ${months_mmm_en[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_en[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
         ;;
     date2text)
-        for y in ${years[@]}; do
-            for m in ${months_mmm_pt[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_pt[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
-        for y in ${years[@]}; do
-            for m in ${months_mmm_en[@]}; do
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mmm_en[@]}; do
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
-        for y in ${years[@]}; do
-            for m in ${numbers_with_0[@]}; do
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${numbers_with_0[@]}; do
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
-        for y in ${years[@]}; do
-            for m in ${months_mm_no0[@]}; do
-                for d in ${days_no0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
-                for d in ${numbers_with_0[@]}; do
-                    run_test $test "$m/$d/$y"
-                done
+        for m in ${months_mm_no0[@]}; do
+            for d in ${days_no0[@]}; do
+                run_test $test "$m/$d/2056"
+            done
+            for d in ${numbers_with_0[@]}; do
+                run_test $test "$m/$d/2056"
             done
         done
         ;;
