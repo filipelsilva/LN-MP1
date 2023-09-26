@@ -1,6 +1,7 @@
 ### custom
 compiled
 images
+*.pdf
 
 ### direnv
 .direnv
