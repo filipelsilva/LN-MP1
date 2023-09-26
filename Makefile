@@ -36,6 +36,10 @@ test-extensive-all:
 	./test-extensive.sh mix2text
 	./test-extensive.sh date2text
 
+.PHONY: pdf
+pdf:
+	pandoc -s -V papersize:a4 report.md -o report.pdf
+
 .PHONY: clean
 clean:
-	rm -rf compiled images
+	rm -rf compiled images report.pdf
