@@ -21,7 +21,7 @@ Este transdutor é utilizado na geração dos transdutores:
 * *mmm2mm*
 * *pt2en* (e, por extensão, *en2pt*)
 
-Este aceita números de 0 a 9, o caracter '/', e os meses em formato MMM, tanto
+Este aceita números de 0 a 9, o caractere '/', e os meses em formato MMM, tanto
 em Inglês como em Português. Isto faz com que os transdutores *pt2en* e *en2pt*,
 quando fornecidos com meses em Inglês e Português , respetivamente, aceitem os
 mesmos, retornando o "input" fornecido sem alteração.
