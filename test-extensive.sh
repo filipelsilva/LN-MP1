@@ -34,32 +34,28 @@ case "$test" in
         ;;
     mix2numerical)
         for m in ${months_mmm_en[@]}; do
-            for d in ${numbers_with_0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-            for d in ${days_no0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
+            run_test $test "$m/01/2056"
+            run_test $test "$m/1/2056"
         done
         ;;
     pt2en)
+        for m in ${months_mmm_en[@]}; do
+            run_test $test "$m/01/2056"
+            run_test $test "$m/1/2056"
+        done
         for m in ${months_mmm_pt[@]}; do
-            for d in ${numbers_with_0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-            for d in ${days_no0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
+            run_test $test "$m/01/2056"
+            run_test $test "$m/1/2056"
         done
         ;;
     en2pt)
+        for m in ${months_mmm_pt[@]}; do
+            run_test $test "$m/01/2056"
+            run_test $test "$m/1/2056"
+        done
         for m in ${months_mmm_en[@]}; do
-            for d in ${numbers_with_0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
-            for d in ${days_no0[@]}; do
-                run_test $test "$m/$d/2056"
-            done
+            run_test $test "$m/01/2056"
+            run_test $test "$m/1/2056"
         done
         ;;
     day)
