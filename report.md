@@ -11,10 +11,7 @@ abaixo descritas.
 
 ## Decisões tomadas no design da solução
 
-* acceptor pesos
-* juntar transdutores
-
-### 1. Transdutor *acceptor*
+### 1. Transdutor *acceptor* - Pesos
 
 Este transdutor é utilizado na geração dos transdutores:
 
